@@ -1,0 +1,11 @@
+<h1>List of all restaurants</h1>
+
+<% @restaurants.each do |restaurant| %>
+  <div class="card" style="width: 18rem;">
+    <div class="card-body">
+      <h5 class="card-title"><%= link_to restaurant.name, restaurant_path(restaurant) %></h5>
+      <h6 class="card-subtitle mb-2 text-muted"><%= restaurant.category %></h6>
+      <p class="card-text">Good food here!!!</p>
+    </div>
+  </div>
+<% end %>
